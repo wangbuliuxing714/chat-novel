@@ -1,16 +1,29 @@
-# chat_novel
+# Chat Novel - 交互式AI小说应用
 
-A new Flutter project.
+这是一个基于Flutter开发的交互式小说应用，使用AI技术生成和继续故事情节，让用户能够参与故事发展。
 
-## Getting Started
+## 功能
 
-This project is a starting point for a Flutter application.
+- 创建新故事
+- 选择故事流向
+- 本地保存故事
+- 继续写作模式
+- 阅读模式
 
-A few resources to get you started if this is your first Flutter project:
+## 技术栈
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter
+- HTTP API通信
+- 阿里百炼API接入
+- SharedPreferences本地存储
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 在线体验
+
+访问 [https://wangbuliuxing714.github.io/chat-novel/](https://wangbuliuxing714.github.io/chat-novel/) 可以在线体验本应用。
+
+## 本地运行
+
+1. 确保安装了Flutter环境
+2. 克隆本仓库
+3. 运行 `flutter pub get` 安装依赖
+4. 运行 `flutter run` 启动应用
