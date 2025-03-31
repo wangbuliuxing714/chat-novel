@@ -616,44 +616,44 @@ class StoryService {
       print('获取故事列表失败: ${e.toString()}');
       
       // 如果出错，返回一些模拟数据
-      return [
-        Story(
-          id: 'story1',
-          title: '神秘岛屿的冒险',
-          coverPrompt: '一个年轻人在神秘岛屿上的冒险',
-          chapters: [
-            StoryChapter(
-              content: '这是一个关于神秘岛屿的冒险故事。主角意外流落到一个未知的岛屿，发现这里有着奇特的生物和未解之谜...',
-              choices: [],
-            ),
-          ],
-          createdAt: DateTime.now().subtract(const Duration(days: 3)),
-          genre: '冒险',
+    return [
+      Story(
+        id: 'story1',
+        title: '神秘岛屿的冒险',
+        coverPrompt: '一个年轻人在神秘岛屿上的冒险',
+        chapters: [
+          StoryChapter(
+            content: '这是一个关于神秘岛屿的冒险故事。主角意外流落到一个未知的岛屿，发现这里有着奇特的生物和未解之谜...',
+            choices: [],
+          ),
+        ],
+        createdAt: DateTime.now().subtract(const Duration(days: 3)),
+        genre: '冒险',
           chatHistory: [
             StoryMessage(role: 'system', content: '你是一个交互式小说创作助手，擅长创建有趣的故事开头。'),
             StoryMessage(role: 'user', content: '请基于以下提示创建一个冒险类型的小说开头: 一个年轻人在神秘岛屿上的冒险'),
             StoryMessage(role: 'assistant', content: '这是一个关于神秘岛屿的冒险故事。主角意外流落到一个未知的岛屿，发现这里有着奇特的生物和未解之谜...'),
           ],
-        ),
-        Story(
-          id: 'story2',
-          title: '都市爱情',
-          coverPrompt: '都市里的爱情故事',
-          chapters: [
-            StoryChapter(
-              content: '这是一个现代都市爱情故事。主角在繁忙的工作中邂逅了命中注定的那个人，但现实的压力让这段感情面临挑战...',
-              choices: [],
-            ),
-          ],
-          createdAt: DateTime.now().subtract(const Duration(days: 1)),
-          genre: '爱情',
+      ),
+      Story(
+        id: 'story2',
+        title: '都市爱情',
+        coverPrompt: '都市里的爱情故事',
+        chapters: [
+          StoryChapter(
+            content: '这是一个现代都市爱情故事。主角在繁忙的工作中邂逅了命中注定的那个人，但现实的压力让这段感情面临挑战...',
+            choices: [],
+          ),
+        ],
+        createdAt: DateTime.now().subtract(const Duration(days: 1)),
+        genre: '爱情',
           chatHistory: [
             StoryMessage(role: 'system', content: '你是一个交互式小说创作助手，擅长创建有趣的故事开头。'),
             StoryMessage(role: 'user', content: '请基于以下提示创建一个爱情类型的小说开头: 都市里的爱情故事'),
             StoryMessage(role: 'assistant', content: '这是一个现代都市爱情故事。主角在繁忙的工作中邂逅了命中注定的那个人，但现实的压力让这段感情面临挑战...'),
           ],
-        ),
-      ];
+      ),
+    ];
     }
   }
 } 
