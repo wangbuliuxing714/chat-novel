@@ -26,10 +26,11 @@ jobs:
         run: flutter pub get
         
       - name: Build Web
-        run: flutter build web --release
+        run: flutter build web --release --base-href /chat-novel/
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/web 
+          publish_dir: ./build/web
+          cname: wangbuliuxing714.github.io 
