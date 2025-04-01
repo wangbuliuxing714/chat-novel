@@ -26,11 +26,14 @@ jobs:
         run: flutter pub get
         
       - name: Build Web
-        run: flutter build web --release --base-href /chat-novel/
+        run: |
+          flutter build web --release --base-href /chat-novel/ --web-renderer html
+          cp build/web/index.html build/web/404.html
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/web
-          force_orphan: true 
+          force_orphan: true
+          enable_jekyll: false 
